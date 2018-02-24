@@ -1,0 +1,79 @@
+page-home {
+  ion-slides {
+    height: 200px;
+    .swiper-container{
+      .swiper-pagination-bullets{
+        bottom: 15px;
+      }
+    }
+  }
+  .menu-bg {
+    background-image: url(/assets/img/home/box.png);
+    padding: 20px 0px 10px 0px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    z-index: 99;
+    position: relative;
+    ion-row{
+      z-index: 99;
+    }
+    img{
+      width: 40%;
+      margin-top: 10px;
+    }
+  }
+  .top-search{
+    position: absolute;
+    z-index: 999;
+    .searchbar-ios{
+      background: none;
+    }
+    .searchbar-input{
+      border-radius: 20px;
+    }
+    .searchbar-search-icon{
+      top: 12px;
+    }
+    ion-searchbar{
+      border-bottom: 0px;
+    }
+    ion-icon{
+      font-size: 2.5em;
+    }
+    ion-badge{
+      position: absolute;
+    }
+  }
+  .news-list{
+    .item-block .item-inner{
+      border-bottom: 0.5px solid map-get($colors, 'slight');
+    }
+    h2{
+      line-height: 2.0em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .text-left{
+      float: left;
+      line-height: 2.0em;
+    }
+    .text-right{
+      float: right;
+      line-height: 2.0em;
+    }
+    img{
+      border-radius: 10px;
+      width: 80px;
+    }
+  }
+}
+
+.menu-speline{
+  position: absolute;
+  border-right: 1px solid map-get($map: $colors, $key: 'slight');
+  height: 30%;
+  right: 0px;
+  top: 30%;
+}

@@ -1,0 +1,44 @@
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <img  *ngIf="imgavter" class="header-img" src="{{imgavter}}">
+        <img *ngIf="!imgavter" class="header-img" src="assets/img/usercenter/avater.png">
+      </ion-col>
+      <ion-col col-9>
+      	<h4 *ngIf="state=='04'">{{user?.nickName}}<img  src="assets/img/usercenter/yescert.png"></h4>
+      	<h4 *ngIf="state!='04'">{{user?.nickName}}<img  src="assets/img/usercenter/nocert.png"></h4>
+      	<p *ngIf="isLogin" [navPush]="'UserInfoViewPage'" [navParams]="{item:user}">点击查看或编辑个人信息</p>
+      	<p *ngIf="!isLogin" [navPush]="'UserInfoViewPage'" [navParams]="{item:user}">未登录</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="line-spe"></div>
+  <ion-list>
+    <!--<button ion-item [navPush]="'MyFamilyPage'">-->
+      <!--<span item-start><img src="assets/img/usercenter/myfamily.png"></span>我的家人-->
+    <!--</button>-->
+    <button ion-item [navPush]="'CertificationPage'" [navParams]="{item:user,state:state}">
+      <span item-start><img src="assets/img/usercenter/certification.png"></span>实名认证
+      <span class="no-cert" item-end *ngIf="state!='04'"><img src="assets/img/usercenter/nocert.png"></span>
+      <span class="no-cert" item-end *ngIf="state=='04'"><img src="assets/img/usercenter/yescert.png"></span>
+    </button>
+  </ion-list>
+  <div class="line-spe"></div>
+  <ion-list>
+    <!--<button ion-item [navPush]="'MyAppointmentPage'">-->
+      <!--<span item-start><img src="assets/img/usercenter/appointment.png"></span>我的预约-->
+    <!--</button>-->
+  </ion-list>
+  <div class="line-spe"></div>
+  <ion-list>
+    <button ion-item [navPush]="'SoftSetPage'">
+      <span item-start><img src="assets/img/usercenter/softset.png"></span>软件设置
+    </button>
+    <button ion-item [navPush]="'FeedBackPage'">
+      <span item-start><img src="assets/img/usercenter/feedback.png"></span>意见反馈
+    </button>
+  </ion-list>
+</ion-content>

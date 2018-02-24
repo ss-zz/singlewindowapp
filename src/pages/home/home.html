@@ -1,0 +1,67 @@
+<ion-content>
+
+  <ion-slides #ionSlides [loop]="true" [pager]="true" autoplay="2000" *ngIf="itemsSlide&&itemsSlide.length>0">
+    <ion-slide *ngFor="let item of itemsSlide" tappable>
+      <img src="{{item.path}}">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid class="menu-bg">
+    <ion-row>
+      <ion-col col-3 text-center tappable [navPush]="'ModuleDescPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>功能介绍</p>
+        <div class="menu-speline"></div>
+      </ion-col>
+      <ion-col col-3 text-center tappable [navPush]="'BizProcessPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>业务办理</p>
+        <div class="menu-speline"></div>
+      </ion-col>
+      <ion-col col-3 text-center tappable [navPush]="'GuidesPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>操作指南</p>
+        <div class="menu-speline"></div>
+      </ion-col>
+      <ion-col col-3 text-center tappable [navPush]="'LawsPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>法律法规</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3 text-center tappable [navPush]="'NoticesPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>通知公告</p>
+        <div class="menu-speline"></div>
+      </ion-col>
+      <ion-col col-3 text-center tappable [navPush]="'WarningsPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>风险预警</p>
+        <div class="menu-speline"></div>
+      </ion-col>
+      <ion-col col-3 text-center tappable [navPush]="'DownloadZonePage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>下载专区</p>
+        <div class="menu-speline"></div>
+      </ion-col>
+      <ion-col col-3 text-center tappable [navPush]="'AddOtherPage'">
+        <img src="assets/img/gongnengjieshao.png">
+        <p>添加其他</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item detail-push>
+      您的体检结果已发布
+      <span>两小时前</span>
+    </ion-item>
+    <ion-item detail-push>
+      您的体检结果已发布
+      <span>两小时前</span>
+    </ion-item>
+  </ion-list>
+
+  <img src="assets/img/" />
+
+</ion-content>

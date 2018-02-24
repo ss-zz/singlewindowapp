@@ -1,0 +1,14 @@
+{
+  "name": "health_cy",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://192.168.1.252:9201/health-server/api/pub"
+    }
+  ]
+}

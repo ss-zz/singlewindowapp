@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>软件设置</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <button ion-item [navPush]="'UserAgreementPage'">
+      <span>用户协议</span>
+    </button>
+    <button ion-item [navPush]="'ChangePasswordPage'">
+      <span>修改密码</span>
+    </button>
+
+  </ion-list>
+  <div padding>
+    <button  ion-button block tappable (click)="logout()">退出当前账号</button>
+  </div>
+
+</ion-content>
