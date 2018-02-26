@@ -125,14 +125,14 @@ p.text2 {
 }
 //顶部标题栏
 .toolbar-background{
-  background: white !important;
+  background: #27A0F0 !important;
 }
 .toolbar-title-ios {
   overflow: visible;
   text-align: center;
   font-size: 1.7rem;
   font-weight: 600;
-  color: #000000;
+  color: #FFFFFF;
   pointer-events: auto;
 }
 //返回按钮颜色
@@ -161,6 +161,11 @@ p.text2 {
   }
 
 }
+.back-button.show-back-button{
+  color: #ffffff;
+}
+
+
 
 // 通用颜色
 .color-muted{

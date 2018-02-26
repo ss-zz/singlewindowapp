@@ -13,6 +13,6 @@ export class TabsPage {
 
   tab1Root = 'HomePage';
   tab2Root = 'MessagePage';
-  tab4Root = 'UserCenterPage';
+  tab3Root = 'UserCenterPage';
 
 }

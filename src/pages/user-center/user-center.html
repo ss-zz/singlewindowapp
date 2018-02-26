@@ -1,44 +1,83 @@
-<ion-content>
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons start >
+      <button ion-button icon-only>
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
 
-  <ion-grid>
+    <ion-title>我的</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon  name="more"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon  name="chatbubbles"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="maincorlor">
     <ion-row>
       <ion-col col-3>
-        <img  *ngIf="imgavter" class="header-img" src="{{imgavter}}">
-        <img *ngIf="!imgavter" class="header-img" src="assets/img/usercenter/avater.png">
+        <!--<img  *ngIf="imgavter" class="header-img" src="{{imgavter}}">-->
+        <img  class="header-img" src="assets/img/rentou.png">
       </ion-col>
       <ion-col col-9>
-      	<h4 *ngIf="state=='04'">{{user?.nickName}}<img  src="assets/img/usercenter/yescert.png"></h4>
-      	<h4 *ngIf="state!='04'">{{user?.nickName}}<img  src="assets/img/usercenter/nocert.png"></h4>
-      	<p *ngIf="isLogin" [navPush]="'UserInfoViewPage'" [navParams]="{item:user}">点击查看或编辑个人信息</p>
-      	<p *ngIf="!isLogin" [navPush]="'UserInfoViewPage'" [navParams]="{item:user}">未登录</p>
+        <h2 class="f18"><span margin-right [navPush]="'LoginPage'">登录</span>|<span margin-left [navPush]="'RegisterPage'">注册</span>
+        <img class="jiantou" src="assets/img/jiantou3.png">
+        </h2>
       </ion-col>
     </ion-row>
   </ion-grid>
-
+  <ion-grid class="middarea">
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/img/gerenzhiliao.png">
+        <p>基础资料</p>
+      </ion-col>
+      <ion-col text-center>
+        <img src="assets/img/saoyisao.png">
+        <p>扫一扫</p>
+      </ion-col>
+      <ion-col text-center>
+        <img src="assets/img/qianbao.png">
+        <p>我的钱包</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <div class="line-spe"></div>
-  <ion-list>
-    <!--<button ion-item [navPush]="'MyFamilyPage'">-->
-      <!--<span item-start><img src="assets/img/usercenter/myfamily.png"></span>我的家人-->
-    <!--</button>-->
-    <button ion-item [navPush]="'CertificationPage'" [navParams]="{item:user,state:state}">
-      <span item-start><img src="assets/img/usercenter/certification.png"></span>实名认证
-      <span class="no-cert" item-end *ngIf="state!='04'"><img src="assets/img/usercenter/nocert.png"></span>
-      <span class="no-cert" item-end *ngIf="state=='04'"><img src="assets/img/usercenter/yescert.png"></span>
-    </button>
-  </ion-list>
-  <div class="line-spe"></div>
-  <ion-list>
-    <!--<button ion-item [navPush]="'MyAppointmentPage'">-->
-      <!--<span item-start><img src="assets/img/usercenter/appointment.png"></span>我的预约-->
-    <!--</button>-->
-  </ion-list>
-  <div class="line-spe"></div>
-  <ion-list>
-    <button ion-item [navPush]="'SoftSetPage'">
-      <span item-start><img src="assets/img/usercenter/softset.png"></span>软件设置
+  <ion-list inset>
+    <button ion-item [navPush]="'LoginPage'">
+      <span item-start></span>常用信息
+      <ion-note item-end>
+        旅客/地址/报销凭证
+      </ion-note>
     </button>
     <button ion-item [navPush]="'FeedBackPage'">
-      <span item-start><img src="assets/img/usercenter/feedback.png"></span>意见反馈
+      <span item-start></span>我的收藏
+      <ion-note item-end>
+        收藏后有变动及时通知
+      </ion-note>
+    </button>
+    <button ion-item [navPush]="'FeedBackPage'">
+      <span item-start></span>浏览历史
+      <ion-note item-end>
+        保留15天随时可回看
+      </ion-note>
     </button>
   </ion-list>
+  <div class="line-spe"></div>
+  <ion-list inset>
+  <button ion-item [navPush]="'FeedBackPage'">
+    <span item-start></span>出行工具
+    <ion-note item-end>
+      航班动态/翻译助手等
+    </ion-note>
+  </button>
+  </ion-list>
+  <div class="line-spe"></div>
 </ion-content>
