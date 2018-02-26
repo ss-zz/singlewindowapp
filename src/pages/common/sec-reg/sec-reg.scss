@@ -1,4 +1,10 @@
 page-sec-reg {
+    background-image: url('/assets/img/bg/city.jpeg');
+    background-position: center;
+    background-size: cover;
+    ion-content{
+      background: none;
+    }
     .bg{
       background-color: #EAEEF4;
     }
