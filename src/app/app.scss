@@ -168,6 +168,9 @@ p.text2 {
 
 
 // 通用颜色
+.color-primary{
+  color: map-get($colors, 'primary');
+}
 .color-muted{
   color: map-get($colors, 'muted');
 }

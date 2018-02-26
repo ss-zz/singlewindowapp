@@ -1,33 +1,41 @@
 page-sec-reg {
-    .bg{
-      background-color: #EAEEF4;
-    }
-    .yewu{
-      background-color: #F3F5F9;
-    }
-    .mycol{
-     background-color: #ffffff;
-      opacity: 1;
-    }
-    img{
-      width: 50px;
-      height: 50px;
-      position: relative;
-      left: -10px;
-    }
-    .chedckbox{
-      zoom: 150%;
-      position: relative;
-      left: -8px;
-      top: -18px;
-    }
+  background-image: url('/assets/img/bg/city.jpeg');
+  background-position: center;
+  background-size: cover;
+  .bg{
+    background: none;
+  }
+  .yewu{
+    background-color: #F3F5F9;
+  }
+  .mycol{
+    background-color: #ffffff;
+    opacity: 1;
+  }
+  img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: -10px;
+  }
+  .chedckbox{
+    zoom: 150%;
+    position: relative;
+    left: -8px;
+    top: -18px;
+  }
   .grid{
     padding: 0px;
   }
+  .row{
+    border-left:1px solid #ccc;
+  }
   .col{
-    padding: 0px;
-    background-color: #ffffff;
-    border:1px solid #cccccc;
+    padding: 5px;
+    background-color: #fff;
+    border-right:1px solid #ccc;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
   }
   h4{
     margin-top: 0px;
