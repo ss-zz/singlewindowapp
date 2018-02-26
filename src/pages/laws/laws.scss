@@ -1,3 +1,32 @@
 page-laws {
 
+    .selected{
+        border-bottom: 2px solid map-get($colors, 'primary');
+    }
+
+    .countrys{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        line-height: 50px;
+        position: relative;
+        .desc{
+            position: absolute;
+            top: 53px;
+            line-height: 20px;
+            left: 15px;
+            width: 80px;
+            text-align: center;
+        }
+        .cover{
+            height: 50px;
+            width: 80px;
+            float: left;
+            margin-left: 10px;
+        }
+        span{
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+
 }

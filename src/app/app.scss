@@ -166,3 +166,18 @@ p.text2 {
 .color-muted{
   color: map-get($colors, 'muted');
 }
+.color-light{
+  color: map-get($colors, 'light');
+}
+// 通用背景色
+.bg-light{
+  background-color: map-get($colors, 'light');
+}
+.bg-slight{
+  background-color: map-get($colors, 'slight');
+}
+
+// 全局样式
+.content{
+  color: #3e3c3c;
+}

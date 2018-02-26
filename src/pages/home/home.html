@@ -1,5 +1,23 @@
 <ion-content>
 
+  <div class="languages">
+    <div class="desc">语种</div>
+    <div class="items-wrap">
+      <div class="oneitem">
+        <img src="assets/img/country/guoqi.png" />中</div>
+      <div class="oneitem">
+        <img src="assets/img/country/yingguo.png" />英</div>
+      <div class="oneitem">
+        <img src="assets/img/country/riben.png" />日</div>
+      <div class="oneitem">
+        <img src="assets/img/country/hanguo1.png" />韩</div>
+      <div class="oneitem">
+        <img src="assets/img/country/deguo.png" />德</div>
+      <div class="oneitem">
+        <img src="assets/img/country/eluosi.png" />俄</div>
+    </div>
+  </div>
+
   <ion-slides #ionSlides [loop]="true" [pager]="true" autoplay="2000" *ngIf="itemsSlide&&itemsSlide.length>0">
     <ion-slide *ngFor="let item of itemsSlide" tappable>
       <img src="{{item.path}}">
@@ -14,54 +32,60 @@
         <div class="menu-speline"></div>
       </ion-col>
       <ion-col col-3 text-center tappable [navPush]="'BizProcessPage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/yewubanli.png">
         <p>业务办理</p>
         <div class="menu-speline"></div>
       </ion-col>
       <ion-col col-3 text-center tappable [navPush]="'GuidesPage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/caozuozhinan.png">
         <p>操作指南</p>
         <div class="menu-speline"></div>
       </ion-col>
       <ion-col col-3 text-center tappable [navPush]="'LawsPage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/falvfagui.png">
         <p>法律法规</p>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-3 text-center tappable [navPush]="'NoticesPage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/tongzhigonggao.png">
         <p>通知公告</p>
         <div class="menu-speline"></div>
       </ion-col>
       <ion-col col-3 text-center tappable [navPush]="'WarningsPage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/fenxianyujing.png">
         <p>风险预警</p>
         <div class="menu-speline"></div>
       </ion-col>
       <ion-col col-3 text-center tappable [navPush]="'DownloadZonePage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/xiazaizhuanqu.png">
         <p>下载专区</p>
         <div class="menu-speline"></div>
       </ion-col>
       <ion-col col-3 text-center tappable [navPush]="'AddOtherPage'">
-        <img src="assets/img/gongnengjieshao.png">
+        <img src="assets/img/tianjia2.png">
         <p>添加其他</p>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-list>
-    <ion-item detail-push>
+    <ion-item detail-push no-lines>
+      <ion-icon item-start>
+        <img src="assets/img/xin.png" />
+      </ion-icon>
       您的体检结果已发布
-      <span>两小时前</span>
+      <span class="color-muted" margin-left>2小时前</span>
     </ion-item>
-    <ion-item detail-push>
+    <ion-item detail-push no-lines>
+      <ion-icon item-start>
+        <img src="assets/img/xin.png" />
+      </ion-icon>
       您的体检结果已发布
-      <span>两小时前</span>
+      <span class="color-muted" margin-left>2小时前</span>
     </ion-item>
   </ion-list>
 
-  <img src="assets/img/" />
+  <img src="assets/img/bg/three.png" />
 
 </ion-content>

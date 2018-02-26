@@ -18,11 +18,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
     this.itemsSlide = [
-      { path: 'assets/img/home/top.jpg' },
-      { path: 'assets/img/home/top.jpg' },
-      { path: 'assets/img/home/top.jpg' },
-      { path: 'assets/img/home/top.jpg' },
-      { path: 'assets/img/home/top.jpg' }
+      { path: 'assets/img/bg/banner2.png' },
+      { path: 'assets/img/bg/banner2.png' },
+      { path: 'assets/img/bg/banner2.png' },
+      { path: 'assets/img/bg/banner2.png' },
+      { path: 'assets/img/bg/banner2.png' }
     ];
   }
 

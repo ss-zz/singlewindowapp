@@ -12,11 +12,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GuidesPage {
 
+  items = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GuidesPage');
+    this.items = [
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2015版往来台湾同行证'},
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2017版外国人永久居留身份证'},
+      {title: '2017版外国人永久居留身份证'}
+    ];
   }
 
 }
