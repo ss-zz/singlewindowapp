@@ -1,67 +1,61 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      注册
-    </ion-title>
-    <ion-buttons>
-      <button ion-button (click)="dismiss()">关闭</button>
-    </ion-buttons>
-  </ion-toolbar>
+<ion-header >
+  <ion-navbar>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <form [formGroup]="registerForm" (ngSubmit)="(confirm())">
-    <ion-list>
-      <ion-item>
-        <ion-icon item-start name="phone-portrait"></ion-icon>
-        <ion-input type="tel" placeholder="请输入手机号码" formControlName="loginName"></ion-input>
-      </ion-item>
-      <span padding-left *ngIf="!registerForm.controls.loginName.valid && registerForm.controls.loginName.touched" color="danger">
-        请输入电话
-      </span>
-      <ion-item>
-        <ion-icon item-start name="key-outline"></ion-icon>
-        <input class="checkCode" type="number" placeholder="请输入验证码" formControlName="verificationCode" /><span class="getVcode">获取验证码</span>
-      </ion-item>
-      <span padding-left *ngIf="!registerForm.controls.verificationCode.valid&& registerForm.controls.verificationCode.touched"
-        color="danger">请输入验证码</span>
-      <ion-item>
-        <ion-icon item-start name="lock-outline"></ion-icon>
-        <ion-input type="password" placeholder="请输入密码（6-12位数字、字母组合）" formControlName="password"></ion-input>
-      </ion-item>
-      <span padding-left *ngIf="!registerForm.controls.password.valid && registerForm.controls.password.touched" color="danger">请输入密码</span>
-      <ion-item>
-        <ion-icon item-start name="lock-outline"></ion-icon>
-        <ion-input type="password" placeholder="请再次输入密码" formControlName="secpassword"></ion-input>
-      </ion-item>
-      <span padding-left *ngIf="!registerForm.controls.secpassword.valid && registerForm.controls.secpassword.touched" color="danger">请再次输入密码</span>
-      <ion-item tappable (click)="sexActionSheet()">
-        <h2>性　别<span style="margin-left: 20px">{{sex}}</span></h2>
-      </ion-item>
-      <!--<ion-item>-->
-        <!--<ion-label>邮　箱</ion-label>-->
-        <!--<ion-input type="text" formControlName="email"></ion-input>-->
-      <!--</ion-item>-->
-      <ion-item>
-        <ion-label>手机号码</ion-label>
-        <ion-input type="text" formControlName="telphone"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>昵　称</ion-label>
-        <ion-input type="text" formControlName="nickName"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>出生日期</ion-label>
-        <ion-datetime  doneText="确定" cancelText="取消" displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"   formControlName="birthDate" ></ion-datetime>
-      </ion-item>
+<ion-content >
+  <div class="bg" padding>
+    <h2 class="f20" text-center>欢迎您注册</h2>
+    <div  class="line"></div>
 
+  <form [formGroup]="registerForm" (ngSubmit)="(confirm())">
+    <ion-list margin-top>
       <ion-item>
-        <p>阅读并同意<a class="user-agree" [navPush]="'UserAgreementPage'">《用户协议》</a></p>
+        <ion-label stacked class="ionlabel">用户昵称</ion-label>
+        <img src="assets/img/renxiang.png">
+        <ion-input class="myborder" type="text" placeholder="请输入用户昵称" formControlName="loginName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="ionlabel">国籍</ion-label>
+        <img src="assets/img/renxiang.png">
+        <ion-input class="myborder" type="text" placeholder="请输入国籍" formControlName="loginName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="ionlabel">证件号码</ion-label>
+        <img src="assets/img/renxiang.png">
+        <ion-input class="myborder" type="text" placeholder="请输入证件号码" formControlName="loginName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="ionlabel">手机号码</ion-label>
+        <img src="assets/img/renxiang.png">
+        <ion-input class="myborder" type="text" placeholder="请输入手机号码" formControlName="loginName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="ionlabel">验证码</ion-label>
+        <img src="assets/img/renxiang.png">
+        <ion-input class="myborder" type="text" placeholder="请输入验证码" formControlName="loginName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="ionlabel">电子邮箱</ion-label>
+        <img src="assets/img/renxiang.png">
+        <ion-input class="myborder" type="text" placeholder="请输入电子邮箱" formControlName="loginName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>同意网站<span color="primary">服务协议</span></ion-label>
+        <ion-checkbox  checked="true"></ion-checkbox>
       </ion-item>
     </ion-list>
-    <div padding-horizontal>
-      <button ion-button block type="submit" [disabled]="!registerForm.valid">注&nbsp;册</button>
+    <div>
+      <!--<button class="next" ion-button  type="submit" round>注&nbsp;册</button>-->
+      <button ion-button round class="next" [navPush]="'SecRegPage'">下一步</button>
     </div>
-    <!--<button class="verification" ion-button small color="secondary" *ngIf="registerForm.controls.phone.valid">获取验证码</button>-->
   </form>
+  </div>
 </ion-content>

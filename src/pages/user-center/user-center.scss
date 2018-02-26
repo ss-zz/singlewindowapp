@@ -1,4 +1,9 @@
 page-user-center {
+   .jiantou{
+     width: 20px;
+     float: right;
+     margin-top: 2px;
+   }
   .list{
     margin-bottom: 0px;
     padding-left: 16px;
@@ -29,15 +34,27 @@ page-user-center {
       }
     }
   }
+  .maincorlor{
+    background-color: #27A0F0;
+  }
+  .middarea{
+    p{
+      color: #27A0F0;
+    }
+    img{
+      width: 56px;
+      height: 42px;
+    }
+  }
+
   .grid{
-    background-color: #3E76E3;
     padding-top: 30px;
     padding-bottom: 10px;
     .col{
       color: white;
       .header-img{
-          width: 80px;
-          height: 80px;
+          width: 60px;
+          height: 60px;
           border-radius: 50%;
       }
       h4{
@@ -49,5 +66,12 @@ page-user-center {
         }
       }
     }
+  }
+  .item-ios [item-right], .item-ios [item-end]{
+    margin-right: 30px;
+    font-size: 14px;
+  }
+  .list-ios[inset] {
+    margin: 0px;
   }
 }

@@ -34,24 +34,7 @@ export class UserCenterPage {
 
   // 刷新用户信息
   refreshUserInfo() {
-    this.userService.isLogin().then(isLogin => {
-      this.isLogin = isLogin;
-      if (isLogin) {
-        this.userService.getLoginInfo().then(userInfo => {
-          this.user = userInfo;
-          if(this.user.avatorFileId){
-            this.imgavter=APP_SERVE_URL+'file/download/'+this.user.avatorFileId;
-          }
-          this.userService.getVerifyState().subscribe((data:any)=>{
-            this.state=data;
-          })
-          // this.userService.getAvatar(this.user.avatorFileId).subscribe(data=>{
-          //   console.log(data);
-          // });
 
-        });
-      }
-    });
   }
 
   // 退出登录
