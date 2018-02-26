@@ -1,3 +1,56 @@
 page-biz-process {
 
+    .onezone{
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+        .left{
+            width: 30%;
+            height: 450px;
+            float: left;
+            background-size: cover;
+            background-position: center;
+        }
+        .left-in{
+            background-image: url(/assets/img/bg/waiguorenrujing.jpg);
+        }
+        .left-out{
+            background-image: url(/assets/img/bg/zhongguorenchujing.jpg);
+        }
+        .right{
+            float: left;
+            width: 68%;
+            .onerow{
+                height: 150px;
+                .onemenu{
+                    width: 50%;
+                    height: 150px;
+                    float: left;
+                    text-align: center;
+                    padding-top: 5px;
+                    img{
+                        width: 40px;
+                    }
+                    .desc{
+                        text-align: center;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                    .detail{
+                        text-align: left;
+                        padding: 3px;
+                        .detail-link{
+                            display: inline-block;
+                            margin-left: 3px;
+                            text-align: left;
+                        }
+                        .detail-link:before{
+                            content: "● ";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

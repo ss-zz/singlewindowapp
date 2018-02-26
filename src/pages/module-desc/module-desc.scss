@@ -2,15 +2,19 @@ page-module-desc {
 
     .onezone{
         border-bottom: 2px solid #eee;
+        padding: 10px;
         .zonetitle{
             color: map-get($colors, 'primary');
+            margin-top: 10px;
             img{
-                width: 50px;
+                width: 20px;
+                float: left;
+                margin-right: 5px;
             }
 
         }
         .zonecontent{
-            
+            line-height: 2em;
         }
     }
 

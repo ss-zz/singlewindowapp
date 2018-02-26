@@ -10,10 +10,12 @@ import { MyInfiniteScrollContentComponent } from './my-infinite-scroll-content/m
 @NgModule({
   declarations: [NoMoreComponent,
     MyRefresherContentComponent,
-    MyInfiniteScrollContentComponent],
+    MyInfiniteScrollContentComponent
+  ],
   imports: [IonicModule],
   exports: [NoMoreComponent,
     MyRefresherContentComponent,
-    MyInfiniteScrollContentComponent]
+    MyInfiniteScrollContentComponent
+  ]
 })
 export class ComponentsModule { }

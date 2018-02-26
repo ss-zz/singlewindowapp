@@ -2,11 +2,47 @@
 
   <ion-navbar>
     <ion-title>法律法规</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="ios-help-circle-outline"></ion-icon>
+      </button>
+
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <div class="row">
+    <div class="col" [ngClass]="{'selected': currentZone == 'yazhou'}" (click)="currentZone = 'yazhou'" text-center>
+      亚洲
+    </div>
+    <div class="col" [ngClass]="{'selected': currentZone == 'ouzhou'}" (click)="currentZone = 'ouzhou'" text-center>
+      欧洲
+    </div>
+    <div class="col" [ngClass]="{'selected': currentZone == 'meizhou'}" (click)="currentZone = 'meizhou'" text-center>
+      美洲
+    </div>
+    <div class="col" [ngClass]="{'selected': currentZone == 'dayangzhou'}" (click)="currentZone = 'dayangzhou'" text-center>
+      大洋洲
+    </div>
+    <div class="col" [ngClass]="{'selected': currentZone == 'feizhou'}" (click)="currentZone = 'feizhou'" text-center>
+      非洲
+    </div>
+  </div>
+
+  <div class="countrys" *ngFor="let item of items">
+    <div class="desc">{{item.name}}</div>
+    <img class="cover" [src]="item.src" />
+    <span>宪法</span>
+    <span>商法</span>
+    <span>宗教</span>
+    <span>行政法</span>
+    <span>家庭法</span>
+    <span>查看所有</span>
+  </div>
 
 </ion-content>
