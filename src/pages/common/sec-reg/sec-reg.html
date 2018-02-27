@@ -1,8 +1,8 @@
 <ion-content class="bg" padding>
-  
+
   <h2 class="title" text-center>自定义业务</h2>
   <div class="line"></div>
-  
+
   <ion-grid>
     <ion-row>
       <h2 class="f16">
@@ -82,9 +82,7 @@
         <p class="text">介绍：购物</p>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <button ion-button round class="finbutton" tappable (click)="final()">注册完成</button>
-    </ion-row>
   </ion-grid>
+  <button ion-button round class="finbutton" tappable [navPush]="'BaseinfoPage'" [navParams]="{isFromReg: true}">注册完成</button>
 
 </ion-content>

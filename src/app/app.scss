@@ -177,6 +177,9 @@ p.text2 {
 .color-light{
   color: map-get($colors, 'light');
 }
+.color-danger{
+  color: red;
+}
 // 通用背景色
 .bg-light{
   background-color: map-get($colors, 'light');

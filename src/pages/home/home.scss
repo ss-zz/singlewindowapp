@@ -52,50 +52,11 @@ page-home {
       width: 60%;
       margin-top: 10px;
     }
-  }
-  .top-search{
-    position: absolute;
-    z-index: 999;
-    .searchbar-ios{
-      background: none;
-    }
-    .searchbar-input{
-      border-radius: 20px;
-    }
-    .searchbar-search-icon{
-      top: 12px;
-    }
-    ion-searchbar{
-      border-bottom: 0px;
-    }
-    ion-icon{
-      font-size: 2.5em;
-    }
-    ion-badge{
-      position: absolute;
-    }
-  }
-  .news-list{
-    .item-block .item-inner{
-      border-bottom: 0.5px solid map-get($colors, 'slight');
-    }
-    h2{
-      line-height: 2.0em;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-    .text-left{
-      float: left;
-      line-height: 2.0em;
-    }
-    .text-right{
-      float: right;
-      line-height: 2.0em;
-    }
-    img{
-      border-radius: 10px;
-      width: 80px;
+    .menu{
+      font-size: 50px;
+      color: #0581eb;
+      width: 60px;
+      height: 60px;
     }
   }
 

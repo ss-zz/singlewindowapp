@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {NavController, ViewController, IonicPage, ActionSheetController} from 'ionic-angular';
+import { NavController, ViewController, IonicPage, ActionSheetController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
-import {UserServiceProvider} from "../../../providers/biz/user-service";
-import {NativeService} from "../../../providers/NativeService";
+import { UserServiceProvider } from "../../../providers/biz/user-service";
+import { NativeService } from "../../../providers/NativeService";
 
 /**
  * 注册
@@ -23,14 +23,14 @@ export class RegisterPage {
   // 是否已获取验证码
   isrun: boolean = false;
   sex;
-  params={
-    loginName:"",
-    password:"",
-    telphone:"",
-    sex:"",
-    nickName:"",
-    email:"",
-    birthDate:"",
+  params = {
+    loginName: "",
+    password: "",
+    telphone: "",
+    sex: "",
+    nickName: "",
+    email: "",
+    birthDate: "",
   }
   constructor(
     private viewCtrl: ViewController,
@@ -54,20 +54,20 @@ export class RegisterPage {
   };
 
   confirm() {
-    this.registerForm.value.sex= this.sex;
-    if(this.registerForm.value.password==this.registerForm.value.secpassword){
-      this.params.loginName=this.registerForm.value.loginName;
-      this.params.password=this.registerForm.value.password;
-      this.params.telphone=this.registerForm.value.telphone;
-      this.params.sex=this.sex;
-      this.params.nickName=this.registerForm.value.nickName;
-      this.params.email=this.registerForm.value.email;
-      this.params.birthDate=this.registerForm.value.birthDate;
-      this.userService.register(this.params).subscribe(data=>{
+    this.registerForm.value.sex = this.sex;
+    if (this.registerForm.value.password == this.registerForm.value.secpassword) {
+      this.params.loginName = this.registerForm.value.loginName;
+      this.params.password = this.registerForm.value.password;
+      this.params.telphone = this.registerForm.value.telphone;
+      this.params.sex = this.sex;
+      this.params.nickName = this.registerForm.value.nickName;
+      this.params.email = this.registerForm.value.email;
+      this.params.birthDate = this.registerForm.value.birthDate;
+      this.userService.register(this.params).subscribe(data => {
         this.nativeService.showToast('注册成功');
         this.viewCtrl.dismiss();
       })
-    }else {
+    } else {
       this.nativeService.showToast('两次密码输入不一致');
     }
 
@@ -86,13 +86,13 @@ export class RegisterPage {
           text: '男',
           role: 'destructive',
           handler: () => {
-            this.sex='男';
+            this.sex = '男';
             this.registerForm.value.sex = '男';
           }
         }, {
           text: '女',
           handler: () => {
-            this.sex='女';
+            this.sex = '女';
             this.registerForm.value.sex = '女';
           }
         }, {

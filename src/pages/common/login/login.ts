@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, ModalController, IonicPage, ViewController} from 'ionic-angular';
+import { NavController, ModalController, IonicPage, ViewController } from 'ionic-angular';
 
 import { NativeService } from "../../../providers/NativeService";
 import { TabsPage } from "../../tabs/tabs";
@@ -21,7 +21,7 @@ export class LoginPage {
   // 是否能返回
   isCanBack: Boolean = false;
   // 登录参数
-  params = {userName:'',passWord:''};
+  params = { userName: '', passWord: '' };
   // 登录表单
   loginForm: any;
   username: any;
@@ -35,7 +35,7 @@ export class LoginPage {
     public storage: Storage,
     public viewCtrl: ViewController,
     private globalData: GlobalData,
-  ) {}
+  ) { }
 
   // 每次页面进入
   ionViewWillEnter() {
@@ -53,8 +53,7 @@ export class LoginPage {
         let user: any = data;
         this.storage.set("token", user.token);
         this.globalData.token = user.token;
-        //this.navCtrl.setRoot('TabsPage');
-         this.closeLogin();
+        this.closeLogin();
       }
     })
   }
@@ -64,7 +63,6 @@ export class LoginPage {
    */
   closeLogin() {
     this.viewCtrl.dismiss();
-    //this.navCtrl.setRoot('HomePage');
   }
 
   /**

@@ -1,5 +1,9 @@
 <ion-content class="bg" padding>
 
+  <div>
+    <button ion-button small clear color="white" (click)="dismiss()">取消</button>
+  </div>
+
   <h2 text-center>欢迎您注册</h2>
   <div class="line"></div>
 
@@ -67,9 +71,7 @@
         <ion-checkbox checked="true"></ion-checkbox>
       </ion-item>
     </ion-list>
-    <div>
-      <button ion-button round class="next" [navPush]="'SecRegPage'">下一步</button>
-    </div>
+    <button ion-button round class="next" [navPush]="'SecRegPage'">下一步</button>
   </form>
 
 </ion-content>

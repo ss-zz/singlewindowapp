@@ -1,4 +1,11 @@
 page-login {
+
+    .bg{
+        background-image: url('../assets/img/bg/city.jpeg');
+        background-position: center;
+        background-size: cover;
+      }
+
     .list{
         margin: 50px 16px;
         .item:first-child{
