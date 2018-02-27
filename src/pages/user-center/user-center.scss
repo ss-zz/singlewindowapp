@@ -9,7 +9,6 @@ page-user-center {
    }
   .list{
     margin-bottom: 0px;
-    padding-left: 16px;
     .item:first-child{
       border-top: 0px;
     }
@@ -37,9 +36,7 @@ page-user-center {
       }
     }
   }
-  .maincorlor{
-    background-color: #27A0F0;
-  }
+  
   .middarea{
     p{
       color: #27A0F0;
@@ -53,6 +50,7 @@ page-user-center {
   .grid{
     padding-top: 30px;
     padding-bottom: 10px;
+    background-color: #fff;
     .col{
       color: white;
       .header-img{
@@ -70,6 +68,11 @@ page-user-center {
       }
     }
   }
+
+  .maincorlor{
+    background-color: #27A0F0;
+  }
+
   .item-ios [item-right], .item-ios [item-end]{
     margin-right: 30px;
     font-size: 14px;

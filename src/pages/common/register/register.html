@@ -1,76 +1,75 @@
-<ion-content>
-  <div class="bg" padding>
-    <h2 class="f20" text-center>欢迎您注册</h2>
-    <div class="line"></div>
+<ion-content class="bg" padding>
 
-    <form [formGroup]="registerForm" (ngSubmit)="(confirm())">
-      <ion-list margin-top>
-        <ion-item>
-          <div class="input-name">用户昵称</div>
-          <div class="spe-input">
-            <div class="img-wrap">
-              <img src="assets/img/renxiang.png" />
-            </div>
-            <input type="text" placeholder="请输入用户昵称" />
-          </div>
-        </ion-item>
-        <ion-item>
-          <div class="input-name">国籍</div>
-          <div class="spe-input">
-            <div class="img-wrap">
-              <img src="assets/img/xiaoxi.png" />
-            </div>
-            <input type="text" placeholder="请输入国籍" />
-          </div>
-        </ion-item>
-        <ion-item>
-          <div class="input-name">证件号码</div>
-          <div class="spe-input">
-            <div class="img-wrap">
-              <img src="assets/img/gerenzhiliao.png" />
-            </div>
-            <input type="text" placeholder="请输入证件号码" />
-          </div>
-        </ion-item>
-        <ion-item>
-          <div class="input-name">手机号码</div>
-          <div class="spe-input">
-            <div class="img-wrap">
-              <img src="assets/img/renxiang.png" />
-            </div>
-            <input type="text" placeholder="请输入手机号码" />
-          </div>
-        </ion-item>
-        <ion-item>
-          <div class="input-name">验证码</div>
-          <div class="spe-input spe-input-mid">
-            <div class="img-wrap">
-              <img src="assets/img/erweima.png" />
-            </div>
-            <input type="text" class="mid-input" placeholder="请输入验证码" />
-            <button ion-button id="getcode" color="yellow" >获取验证码</button>
-          </div>
-        </ion-item>
-        <ion-item>
-          <div class="input-name">电子邮箱</div>
-          <div class="spe-input">
-            <div class="img-wrap">
-              <img src="assets/img/xinxi.png" />
-            </div>
-            <input type="text" placeholder="请输入电子邮箱" />
-          </div>
-        </ion-item>
-        <ion-item>
-          <ion-label>同意
-            <span class="color-primary">网站服务协议</span>
-          </ion-label>
-          <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
-      </ion-list>
-      <div>
-        <button ion-button round class="next" [navPush]="'SecRegPage'">下一步</button>
-      </div>
-    </form>
+  <h2 text-center>欢迎您注册</h2>
+  <div class="line"></div>
 
-  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="(confirm())">
+    <ion-list margin-top>
+      <ion-item>
+        <div class="input-name">用户昵称</div>
+        <div class="spe-input">
+          <div class="img-wrap">
+            <img src="assets/img/renxiang.png" />
+          </div>
+          <input type="text" placeholder="请输入用户昵称" />
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="input-name">国籍</div>
+        <div class="spe-input">
+          <div class="img-wrap">
+            <img src="assets/img/xiaoxi.png" />
+          </div>
+          <input type="text" placeholder="请输入国籍" />
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="input-name">证件号码</div>
+        <div class="spe-input">
+          <div class="img-wrap">
+            <img src="assets/img/gerenzhiliao.png" />
+          </div>
+          <input type="text" placeholder="请输入证件号码" />
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="input-name">手机号码</div>
+        <div class="spe-input">
+          <div class="img-wrap">
+            <img src="assets/img/renxiang.png" />
+          </div>
+          <input type="text" placeholder="请输入手机号码" />
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="input-name">验证码</div>
+        <div class="spe-input spe-input-mid">
+          <div class="img-wrap">
+            <img src="assets/img/erweima.png" />
+          </div>
+          <input type="text" class="mid-input" placeholder="请输入验证码" />
+          <button ion-button id="getcode" color="yellow">获取验证码</button>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="input-name">电子邮箱</div>
+        <div class="spe-input">
+          <div class="img-wrap">
+            <img src="assets/img/xinxi.png" />
+          </div>
+          <input type="text" placeholder="请输入电子邮箱" />
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>同意
+          <span class="color-primary">网站服务协议</span>
+        </ion-label>
+        <ion-checkbox checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <div>
+      <button ion-button round class="next" [navPush]="'SecRegPage'">下一步</button>
+    </div>
+  </form>
+
 </ion-content>

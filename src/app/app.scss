@@ -40,7 +40,7 @@
 .border-radius{
   border-radius: 5px;
 }
-.line-spe{width: 100%; height: 8px; background-color: #f5f5f5;}
+.line-spe{width: 100%; height: 8px; background-color: map-get($colors, 'slight');}
 .nowrap{
   white-space: nowrap;
 }

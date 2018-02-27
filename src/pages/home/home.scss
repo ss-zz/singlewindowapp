@@ -41,13 +41,10 @@ page-home {
   }
 
   .menu-bg {
-    background-image: url(/assets/img/home/box.png);
-    padding: 20px 0px 10px 0px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin-top: -20px;
     z-index: 99;
     position: relative;
+    background-color: #fff;
+    margin-bottom: 10px;
     ion-row{
       z-index: 99;
     }
@@ -105,6 +102,11 @@ page-home {
   ion-icon img{
     width: 36px;
   }
+
+  .mid-list{
+    margin-bottom: 10px;
+  }
+
 }
 
 .menu-speline{

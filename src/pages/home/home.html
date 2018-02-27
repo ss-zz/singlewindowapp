@@ -1,8 +1,8 @@
-<ion-content>
+<ion-content class="bg-slight">
 
   <div class="languages">
-    <div class="desc">语种</div>
-    <div class="items-wrap">
+    <div class="desc" (click)="showLanguages=!showLanguages">语种&gt;</div>
+    <div class="items-wrap" *ngIf="showLanguages">
       <div class="oneitem">
         <img src="assets/img/country/guoqi.png" />中</div>
       <div class="oneitem">
@@ -69,7 +69,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-list>
+  <ion-list class="mid-list">
     <ion-item detail-push no-lines>
       <ion-icon item-start>
         <img src="assets/img/xin.png" />

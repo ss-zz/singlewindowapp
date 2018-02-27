@@ -21,15 +21,17 @@ page-biz-process {
             float: left;
             width: 68%;
             .onerow{
-                height: 150px;
+                float: left;
+                width: 100%;
+                margin-bottom: 10px;
                 .onemenu{
                     width: 50%;
-                    height: 150px;
                     float: left;
                     text-align: center;
                     padding-top: 5px;
                     img{
                         width: 40px;
+                        height: 40px;
                     }
                     .desc{
                         text-align: center;
