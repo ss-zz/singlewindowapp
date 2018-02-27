@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-toolbar color="primary">
-    <ion-buttons start >
+    <ion-buttons start tappable (click)="back()">
       <button ion-button icon-only>
         取消
       </button>
@@ -22,7 +22,7 @@
   <div class="headerarea">
     <button ion-button round class="shibie">识别证件添加信息</button>
   </div>
-  <ion-list>
+  <ion-list no-lines>
     <ion-item  class="maincolor f14">
       <ion-grid>
         <ion-row>

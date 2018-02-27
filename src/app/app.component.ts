@@ -50,7 +50,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       // 设置状态栏
       this.statusBar.styleDefault();
-      //this.statusBar.styleLightContent();
+      this.statusBar.styleLightContent();
       // 隐藏启动页
       this.splashScreen.hide();
       // 注册返回按键事件

@@ -14,6 +14,8 @@ export class BaseinfoPage {
   ionViewDidLoad() {
 
   }
-
+  back(){
+    this.navCtrl.pop();
+  }
 
 }
