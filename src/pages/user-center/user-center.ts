@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, IonicPage } from 'ionic-angular';
 import { UserServiceProvider } from '../../providers/biz/user-service';
-import {APP_SERVE_URL} from "../../providers/Constants";
+import { APP_SERVE_URL } from "../../providers/Constants";
+import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 
 /**
  * 用户中心/个人
@@ -17,14 +18,12 @@ export class UserCenterPage {
   user: any = {};
   // 是否登录
   isLogin: Boolean = true;
-  //是否已认证
-  isCheck: boolean = false;
-  imgavter;
-  state="01";
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private userService: UserServiceProvider
+    private userService: UserServiceProvider,
+    private zbar: ZBar
   ) { }
 
   // 每次页面进入
@@ -44,14 +43,21 @@ export class UserCenterPage {
     });
   }
 
-  // 版本检测
-  detectVersion() {
-    alert("开发中");
-  }
+  // 扫一扫
+  zbarScan() {
+    let options: ZBarOptions = {
+      flash: 'auto',
+      drawSight: true
+    };
 
-  // 清除缓存
-  clearCache() {
-    alert("开发中");
+    this.zbar.scan(options)
+      .then(result => {
+
+      })
+      .catch(error => {
+
+      });
+
   }
 
 }
